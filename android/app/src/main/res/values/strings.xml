@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">fmsMobile</string>
+         <string moduleConfig="true" name="CodePushDeploymentKey">VKATkmgmXZ8gP8Stp3gi4P9kVba1zy1nnE3Jk</string>
+</resources>

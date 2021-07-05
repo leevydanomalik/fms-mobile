@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "358893549513",
+    "project_id": "fmsmobile-7a5cd",
+    "storage_bucket": "fmsmobile-7a5cd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358893549513:android:4912667ccf0617cb859a18",
+        "android_client_info": {
+          "package_name": "com.fmsmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358893549513-2td0vj5k9r4pge5j0n75j0et2r3lj7i8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdao3ExHPmm2nJjkEgIakXbXNU9h5gvcI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358893549513-2td0vj5k9r4pge5j0n75j0et2r3lj7i8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
