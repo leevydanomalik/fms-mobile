@@ -374,7 +374,7 @@ class MainScreen extends React.Component {
     componentDidMount() {
         // this.startWebSocket()
         // this.getDataDocGw()
-        // this.startPusher()
+        this.startPusher()
         this.setToken()
         messaging().onMessage(async remoteMessage => {
             this.onDisplayNotification(remoteMessage)
@@ -451,12 +451,12 @@ class MainScreen extends React.Component {
     }
 
     startPusher() {
-        var pusher = new Pusher('7ac57e99c8c3cce7698e', {
+        var pusher = new Pusher('19ee1bf3817a716b8868', {
             cluster: 'ap1'
         });
 
-        var channel = pusher.subscribe('wms-channel');
-        channel.bind('wms-event', function (data) {
+        var channel = pusher.subscribe('fms-channel');
+        channel.bind('fms-event', function (data) {
             console.log('dataaa', data)
             let datas = (data.message)
             let message = Object.assign([], this.state.message)
