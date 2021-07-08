@@ -36,6 +36,7 @@ import R from 'ramda'
 import CardHome from './Modules/CardHome'
 import BottomSheet from 'reanimated-bottom-sheet'
 import Pusher from 'pusher-js/react-native';
+import md5 from 'md5'
 
 const { width, height } = Dimensions.get('window')
 const endPoint = (height - 170)
@@ -450,13 +451,18 @@ class MainScreen extends React.Component {
         console.log("token", token)
     }
 
-    startPusher() {
+    async startPusher() {
         var pusher = new Pusher('19ee1bf3817a716b8868', {
             cluster: 'ap1'
         });
 
-        var channel = pusher.subscribe('fms-channel');
-        channel.bind('fms-event', function (data) {
+        await messaging().registerDeviceForRemoteMessages();
+        const fcmToken = await messaging().getToken();
+        const channelID = `fms-channel-${md5(fcmToken)}`
+        const eventID = `fms-event-${md5(fcmToken)}`
+
+        var channel = pusher.subscribe(channelID);
+        channel.bind(eventID, function (data) {
             console.log('dataaa', data)
             let datas = (data.message)
             let message = Object.assign([], this.state.message)

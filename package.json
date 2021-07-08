@@ -23,6 +23,7 @@
     "axios": "^0.21.1",
     "base-64": "^1.0.0",
     "lottie-react-native": "^4.0.2",
+    "md5": "^2.3.0",
     "moment": "^2.29.1",
     "native-base": "^2.13.14",
     "pusher-js": "^7.0.3",
